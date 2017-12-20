@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header/Header';
+import { isLoggedIn } from '../utils/AuthService';
 import { getGreaterSeattleData } from '../utils/hiking-api';
 
 class GreaterSeattleHikes extends Component {

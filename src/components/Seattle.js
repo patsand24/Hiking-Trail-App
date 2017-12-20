@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header/Header';
+import { isLoggedIn } from '../utils/AuthService';
 import { getSeattleData } from '../utils/hiking-api';
 
 class SeattleHikes extends Component {
@@ -49,10 +50,12 @@ class SeattleHikes extends Component {
         </div> */}
 
         <div className="col-sm-12">
+          { isLoggedIn() ?
             <div className="jumbotron text-center">
               <h2>View Greater Seattle Hikes</h2>
               <Link className="btn btn-lg btn-success" to='/greaterSeattle'> Greater Seattle Hikes </Link>
-            </div>
+            </div> : <div className="jumbotron text-center"><h2>Get Access to Greater Seattle Hikes By Logging In</h2></div>
+          }
         </div>
       </div>
     );

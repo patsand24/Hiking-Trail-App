@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Route, Link, NavLink} from 'react-router-dom';
+import { login, logout, isLoggedIn } from '../../utils/AuthService';
 
 class Header extends React.Component {
 	render() {
@@ -14,15 +15,20 @@ class Header extends React.Component {
             <Link to="/seattle">Seattle Trails</Link>
           </li>
           <li>
-            <Link to="/greaterSeattle">Greater Seattle Trails</Link>
+            {
+            (isLoggedIn() ) ? <Link to="/greaterSeattle">Greater Seattle Trails</Link> : ''
+            }
           </li>
           <li>
            <Link to="/about">About</Link>
           </li>
         </ul>
         <ul className="nav navbar-nav navbar-right">
-          <li><button className="btn btn-info log">Log In</button></li>
-          <li><button className="btn btn-danger log">Sign Up</button></li>
+          <li>
+            {
+            (isLoggedIn()) ? ( <button className="btn btn-info log" onClick={() => logout()}>Log Out </button> ) : ( <button className="btn btn-info log"onClick={() => login()}>Log In</button> )
+            }
+          </li>
         </ul>
       </nav>
     );
