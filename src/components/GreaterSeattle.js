@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
-import Header from './Header';
+import { Link } from 'react-router-dom';
+import Header from './Header/Header';
 import { getGreaterSeattleData } from '../utils/hiking-api';
 
 class GreaterSeattleHikes extends Component {
@@ -17,7 +17,7 @@ class GreaterSeattleHikes extends Component {
   }
 
   componentDidMount() {
-    this.getGreaterSeattleData();
+    this.getGreaterSeattleHikes();
   }
 
   render() {
@@ -26,7 +26,7 @@ class GreaterSeattleHikes extends Component {
 
     return (
       <div>
-        <Nav />
+        <Header />
         <h3 className="text-center">Greater Seattle Hikes</h3>
         <hr/>
 
@@ -45,7 +45,7 @@ class GreaterSeattleHikes extends Component {
 
         <div className="col-sm-12">
           <div className="jumbotron text-center">
-            <h2>Get Access to More Hikes By Logging In</h2>
+            <h2>View Seattle Proper Hikes</h2>
             <Link className="btn btn-lg btn-success" to='/'>Seattle Proper Hikes </Link>
           </div>
         </div>

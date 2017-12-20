@@ -18,9 +18,9 @@ const Root = () => {
     return (
         <Router>
             <div>
-                <Header />
-                <Route exact path="/" component={Home} />
+                <Route exact path="/" component={SeattleHikes} />
                 <Route path="/about" component={About} />
+                <Route path="/greaterSeattle" component={GreaterSeattleHikes} />
             </div>
         </Router>
     );
