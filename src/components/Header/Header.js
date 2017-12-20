@@ -7,9 +7,12 @@ class Header extends React.Component {
 		return (
 			<nav className="navbar navbar-default">
         <div className="navbar-header">
-          <Link className="navbar-brand" to="/">Seattle Hiking Trails</Link>
+          <Link className="navbar-brand" to="/">Home</Link>
         </div>
         <ul className="nav navbar-nav">
+          <li>
+            <Link to="/seattle">Seattle Trails</Link>
+          </li>
           <li>
             <Link to="/greaterSeattle">Greater Seattle Trails</Link>
           </li>

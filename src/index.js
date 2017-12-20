@@ -18,7 +18,8 @@ const Root = () => {
     return (
         <Router>
             <div>
-                <Route exact path="/" component={SeattleHikes} />
+                <Route exact path="/" component={Home} />
+                <Route exact path="/seattle" component={SeattleHikes} />
                 <Route path="/about" component={About} />
                 <Route path="/greaterSeattle" component={GreaterSeattleHikes} />
             </div>
