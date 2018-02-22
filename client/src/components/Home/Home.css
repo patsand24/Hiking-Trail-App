@@ -1,0 +1,16 @@
+.main {
+   background: url('https://speakzeasy.files.wordpress.com/2015/09/mount-rainier.jpg');
+   height: 600px;
+   padding-top: 0;
+   margin-top: 0;
+}
+
+.title {
+    font-size: 3em;
+    color: lightgray;
+}
+
+.header {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
