@@ -1,0 +1,4 @@
+{
+  "dbUri": "mongodb://admin:admin24@ds117878.mlab.com:17878/heroku_c7xbpzdb",
+  "jwtSecret": "a secret phrase!!"
+}
